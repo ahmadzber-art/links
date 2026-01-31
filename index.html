@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ئەحمەد زوبێر - لینکەکانم</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVVW4EEHJ9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LVVW4EEHJ9');
+    </script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        h1 {
+            color: #1a202c;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-right: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            color: #92400e;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box i {
+            font-size: 20px;
+            color: #f59e0b;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-button {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 18px 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.4s ease;
+            z-index: 0;
+        }
+
+        .link-button:hover::before {
+            width: 100%;
+        }
+
+        .link-button:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .link-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .link-button:hover .link-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .link-text {
+            flex: 1;
+            text-align: right;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .link-button:hover .link-title {
+            color: white;
+        }
+
+        .link-subtitle {
+            font-size: 14px;
+            color: #475569;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .link-button:hover .link-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .link-arrow {
+            font-size: 20px;
+            color: #cbd5e1;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover .link-arrow {
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        /* Social Media Colors */
+        .instagram { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+        .facebook { background: #1877f2; }
+        .snapchat { background: #FFFC00; color: #000 !important; }
+        .tiktok { background: linear-gradient(135deg, #00f2ea 0%, #ff0050 100%); }
+        .whatsapp { background: #25D366; }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .footer i {
+            color: #ef4444;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .link-button {
+                padding: 15px 18px;
+            }
+
+            .link-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile">
+        <div class="profile-image">
+            AZ
+        </div>
+        <h1>ئەحمەد زوبێر</h1>
+        <p class="subtitle">کامێرامان | Videographer 🎥</p>
+    </div>
+
+    <!-- Warning Box -->
+    <div class="warning-box">
+        <i class="fas fa-shield-alt"></i>
+        <span>تەنها لەم ئەپانە بەرپرسم</span>
+    </div>
+
+    <!-- Social Links -->
+    <div class="links">
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/ahmad_zber12?igsh=MXY0MW9nYzUyemtqNg==" class="link-button" target="_blank">
+            <div class="link-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="link-text">
+                <div class="link-title">Instagram</div>
+                <div class="link-subtitle">@ahmad_zber12</div>
+            </div>
+            <div class="link-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1ZfWo4tX9b/?mibextid=wwXIfr" class="link-button" target="_blank">
+            <div class="link-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="link-text">
+                <div class="link-title">Facebook</div>
+                <div class="link-subtitle">پەیجی فەیسبووک</div>
+            </div>
+            <div class="link-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+        </a>
+
+        <!-- Snapchat -->
+        <a href="https://www.snapchat.com/add/aho9997?share_id=e_Q79UZvSLuFf7vzeli_8w&locale=en_IQ" class="link-button" target="_blank">
+            <div class="link-icon snapchat">
+                <i class="fab fa-snapchat-ghost"></i>
+            </div>
+            <div class="link-text">
+                <div class="link-title">Snapchat</div>
+                <div class="link-subtitle">@aho9997</div>
+            </div>
+            <div class="link-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@ahmad_zber?_r=1&_t=ZS-93VcEF8t6hN" class="link-button" target="_blank">
+            <div class="link-icon tiktok">
+                <i class="fab fa-tiktok"></i>
+            </div>
+            <div class="link-text">
+                <div class="link-title">TikTok</div>
+                <div class="link-subtitle">@ahmad_zber</div>
+            </div>
+            <div class="link-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/9647518879468" class="link-button" target="_blank">
+            <div class="link-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="link-text">
+                <div class="link-title">WhatsApp</div>
+                <div class="link-subtitle">پەیوەندی ڕاستەوخۆ</div>
+            </div>
+            <div class="link-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+‎        دروستکراوە لەگەڵ <i class="fas fa-heart"></i> لەلایەن ئەحمەد زوبێر
+    </div>
+
+</div>
+
+</body>
+</html>
